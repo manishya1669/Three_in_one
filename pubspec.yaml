@@ -37,6 +37,8 @@ dependencies:
   hive: ^2.0.4
   path_provider: ^2.0.8
   curved_navigation_bar: ^1.0.1
+  flutter_chess_board: ^1.0.1
+  flutter_stateless_chessboard: ^1.1.1
 
 dev_dependencies:
   flutter_test:

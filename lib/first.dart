@@ -48,7 +48,7 @@ class Adder extends StatelessWidget {
                   fontSize: 18,
                   fontWeight: FontWeight.w600),
             ),
-          )
+          ),
         ],
       ),
     );

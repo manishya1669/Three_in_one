@@ -1,18 +1,13 @@
 // ignore_for_file: unused_local_variable, prefer_const_constructors
 
 import 'package:flappy/Snake/startsnake.dart';
+import 'package:flappy/chess/chessss.dart';
 import 'package:flappy/first.dart';
 import 'package:flappy/homepage.dart';
+import 'package:flappy/splashscreen.dart';
 import 'package:flutter/material.dart';
 
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-
 void main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // final appDocumentDirector =
-  //     await path_provider.getApplicationDocumentsDirectory();
-  // Hive.init(appDocumentDirector.path);
-  // await Hive.openBox("BestScore");
   runApp(const MyApp());
 }
 
@@ -26,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: CustomNavi(),
+      home: SplashScreen(),
     );
   }
 }
@@ -37,11 +32,29 @@ class CustomNavi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[500],
+      backgroundColor: Colors.teal,
       body: Column(
         children: [
           SizedBox(
             height: 40,
+            // width: MediaQuery.of(context).size.width,
+          ),
+          Container(
+            height: 40,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+                color: Colors.teal, borderRadius: BorderRadius.circular(10)),
+            child: Text(
+              "GameZone",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white),
+            ),
+          ),
+          SizedBox(
+            height: 20,
           ),
           InkWell(
               onTap: () {
@@ -52,7 +65,7 @@ class CustomNavi extends StatelessWidget {
               },
               child: Adder(
                 //     setstate()
-                color: Colors.blue[100],
+                color: Colors.teal[300],
                 x: 0,
                 y: 0.5,
                 image: 'assets/images/angrybird.png',
@@ -70,7 +83,7 @@ class CustomNavi extends StatelessWidget {
               },
               child: Adder(
                 //     setstate()
-                color: Colors.blue[100],
+                color: Colors.teal[300],
                 x: 0,
                 y: 0.5,
                 image: 'assets/images/s.png',
@@ -83,16 +96,16 @@ class CustomNavi extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
+                  MaterialPageRoute(builder: (context) => Chess()),
                 );
               },
               child: Adder(
                 //     setstate()
-                color: Colors.blue[100],
+                color: Colors.teal[300],
                 x: 0,
                 y: 0.5,
-                image: 'assets/images/angrybird.png',
-                name: "Angrybird",
+                image: 'assets/images/chess1.png',
+                name: "Chess",
               )),
         ],
       ),
